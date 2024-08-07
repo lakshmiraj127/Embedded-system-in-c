@@ -1,0 +1,49 @@
+#include <reg51.h>
+
+#define LCD_dat P2
+sbit RS = P3^0;
+sbit EN = P3^1;
+
+void lcd_cmd(char ch);
+void lcd_data(char ch);
+void lcd_str(char *str);
+void delay();
+
+void delay() {
+    int i;
+    for(i = 0; i < 100; i++); 
+}
+
+void lcd_cmd(char ch) {
+    LCD_dat = ch;
+    RS = 0;             
+    EN = 1;
+    delay();
+    EN = 0;
+}
+
+void lcd_data(char ch) {
+    LCD_dat = ch;
+    RS = 1;            
+    EN = 1;
+    delay();
+    EN = 0;
+}
+
+void lcd_str(char *str) {
+    int l = 0;
+    while (str[l] != '\0') {
+        lcd_data(str[l]);
+        l++;
+    }
+}
+
+void main() {
+    lcd_cmd(0X38); 
+    lcd_cmd(0X0E); 
+    while (1) {
+        lcd_cmd(0X80); 
+		    lcd_cmd(0X0C);	
+        lcd_str("hello"); 
+    }
+}
