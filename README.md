@@ -3,6 +3,10 @@
 
 This project demonstrates interfacing an LCD with the 8051 microcontroller using assembly language. The code includes functions to send commands, data, and display strings on the LCD.
 
+## Tools Reqired
+-keil u vision
+-proteus
+
 ## Hardware Requirements
 
 - 8051 microcontroller
