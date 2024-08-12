@@ -1,3 +1,4 @@
+
 # 8051 LCD Interfacing
 
 This project demonstrates interfacing an LCD with the 8051 microcontroller using assembly language. The code includes functions to send commands, data, and display strings on the LCD.
@@ -8,6 +9,7 @@ This project demonstrates interfacing an LCD with the 8051 microcontroller using
 - LCD display
 - 10K ohm potentiometer
 - Connecting wires
+![lcdsisppp](https://github.com/user-attachments/assets/6eb8ae30-bc71-4b99-bdac-fd1f763c59b6)
 
 ## Instructions
 
